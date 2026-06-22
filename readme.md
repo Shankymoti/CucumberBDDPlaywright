@@ -98,7 +98,11 @@ when we have --save-dev then it will be added in dev dependency
 8.  to rerun  "rerun:@rerun.txt" in cucumber.json in format
 9. to run parallel add   "parallel": 2 in cucumber.json
 
-10
+10. npm i fs-extra D for automatically file creation like test-result
+https://github.com/jprichardson/node-fs-extra/blob/master/README.md
+create init.ts
+
+
 
 
 
