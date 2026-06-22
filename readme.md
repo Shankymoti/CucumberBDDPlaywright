@@ -95,6 +95,11 @@ npm install multiple-cucumber-html-reporter --save-dev
 
 when we have --save-dev then it will be added in dev dependency
 
+8.  to rerun  "rerun:@rerun.txt" in cucumber.json in format
+9. to run parallel add   "parallel": 2 in cucumber.json
+
+10
+
 
 
 
