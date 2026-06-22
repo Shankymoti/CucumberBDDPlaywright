@@ -14,7 +14,9 @@ Given('User navigates to the application', async function () {
  
 
   // await page.goto('https://bookcart.azurewebsites.net/');
-   await pageFixture.page.goto('https://naveenautomationlabs.com/opencart/')
+   //await pageFixture.page.goto(process.env.BASEURL);
+   await pageFixture.page.goto(process.env.BASEURL!);
+   pageFixture.logger.info("User navigated to the application : "+process.env.BASEURL);
 });
 
 
@@ -25,6 +27,8 @@ Given('User click on the login link', async function () {
 // //span[text() = 'Login'] or span[contains[test(), 'Login']]
 
 await pageFixture.page.getByTitle('My Account').click()
+await pageFixture.page.waitForLoadState();
+ pageFixture.logger.info("User clicked on the login link");
 await pageFixture.page.locator("//a[text()='Login']").click()
 });
 
@@ -59,7 +63,8 @@ Then('Login should be success', async function () {
 
 await pageFixture.page.getByTitle('My Account').click()
 const text = await pageFixture.page.locator("//ul[contains(@class,'dropdown-menu-right')]//li[last()]").innerText()
-console.log(text);
+//console.log(text);
+pageFixture.logger.info("User logged in successfully and username is : "+text);
 await pageFixture.page.locator("//ul[contains(@class,'dropdown-menu-right')]//li[last()]").click()
 });
 

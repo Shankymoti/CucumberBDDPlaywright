@@ -7,6 +7,7 @@ When('user search for a {string}', async function (product) {
      //   await page.getByPlaceholder('Search books or authors').fill(string); 
         // await page.locator('input[placeholder="Search books or authors"]').type(string);
 
+        pageFixture.logger.info("User searched for the product : "+product);
         await pageFixture.page.getByPlaceholder('Search').fill(product)
         await pageFixture.page.locator('.input-group-btn').click()
 });

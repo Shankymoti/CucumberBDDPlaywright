@@ -102,6 +102,13 @@ when we have --save-dev then it will be added in dev dependency
 https://github.com/jprichardson/node-fs-extra/blob/master/README.md
 create init.ts
 
+11. npm i dotenv -D
+npm i cross-env -D
+
+12. npm install winston
+
+
+
 
 
 
