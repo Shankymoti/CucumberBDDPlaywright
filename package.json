@@ -1,0 +1,20 @@
+{
+  "name": "cucumberbddplaywright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js || true",
+    "posttest": "npx ts-node src/helper/report.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.9.0",
+    "@playwright/test": "^1.61.0",
+    "multiple-cucumber-html-reporter": "^3.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
